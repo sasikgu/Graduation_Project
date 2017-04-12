@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+
+   >
+
+    <TextView
+        android:id="@+id/weather_header_area"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:text="北京市"/>
+
+    <TextView
+        android:id="@+id/weather_header_daytime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weather_header_area"
+        android:textSize="14sp"
+        android:textColor="@color/colorWhite"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="04月11日"/>
+
+    <LinearLayout
+        android:id="@+id/weather_header_Liner"
+        android:layout_below="@id/weather_header_daytime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/weather_header_day_weather_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/weather_header_day_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/colorWhite"
+            android:text="晴天"/>
+
+        <TextView
+            android:id="@+id/weather_header_day_air_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:layout_gravity="center"
+            android:paddingLeft="8dp"
+            android:text="22-7"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/weather_night_wind_power"
+        android:layout_below="@id/weather_header_Liner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorWhite"
+        android:paddingLeft="10dp"
+
+        android:text="微风  3-4级"/>
+
+    <ImageView
+        android:id="@+id/weather_big_pic"
+        android:layout_toRightOf="@id/weather_header_area"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/weather_big_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_below="@id/weather_night_wind_power"
+        android:textSize="80dp"
+        android:layout_marginTop="25dp"
+        android:paddingLeft="70dp"
+        android:text="7"/>
+    <TextView
+        android:id="@+id/weather_o"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:layout_toRightOf="@id/weather_big_size"
+       android:layout_alignTop="@id/weather_big_size"
+        android:text="o"/>
+    <TextView
+        android:id="@+id/weather_link"
+        android:layout_toRightOf="@id/weather_o"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:layout_alignTop="@id/weather_o"
+        android:layout_marginTop="30dp"
+        android:text="~"/>
+
+    <TextView
+        android:id="@+id/weather_big_size2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_below="@id/weather_link"
+        android:textSize="80dp"
+        android:layout_alignTop="@id/weather_big_size"
+        android:layout_toRightOf="@id/weather_link"
+        android:layout_marginLeft="8dp"
+        android:text="20"/>
+
+    <TextView
+        android:id="@+id/weather_o2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:layout_toRightOf="@id/weather_big_size2"
+        android:layout_alignTop="@id/weather_big_size2"
+        android:layout_marginTop="2dp"
+        android:text="o"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="日期"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="图标"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="天气"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="温度"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

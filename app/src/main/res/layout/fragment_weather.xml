@@ -3,15 +3,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorAccent"
+    android:background="@mipmap/weather_xia"
     >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="天气预报"
-        android:textSize="30sp"
-        />
+   <LinearLayout
+       android:id="@+id/weather_ll"
+       android:layout_width="match_parent"
+       android:layout_height="55dp"
+       android:orientation="horizontal">
+      <EditText
+          android:id="@+id/weather_city"
+          android:layout_width="0dp"
+          android:layout_weight="2.7"
+          android:layout_height="45dp"
+          android:background="@drawable/weather_et_shape"
+          android:gravity="center"
+          android:hint="请输入城市名"/>
+      <Button
+          android:id="@+id/weather_seacher_bt"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="44dp"
+          android:background="@drawable/weather_bt_selector"
+         android:textColor="@color/colorWhite"
+         android:layout_marginLeft="5dp"
+          android:layout_marginRight="5dp"
+          android:text="查询"/>
+   </LinearLayout>
+
+   <ListView
+       android:id="@+id/weather_lv"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+   </ListView>
+
 
 </LinearLayout>
