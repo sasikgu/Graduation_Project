@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#436EEE"
+
+        >
+        <ImageView
+            android:id="@+id/main_content_image_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:src="@mipmap/arrow"
+            android:onClick="onClick"
+            android:layout_centerVertical="true"
+            />
+        <FrameLayout
+            android:id="@+id/main_title_page"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            >
+            <TextView
+                android:id="@+id/main_title_map"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="地图"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:onClick="onClick"
+                android:textColor="#fff"
+                />
+            <TextView
+                android:id="@+id/main_title_weather"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="80dp"
+                android:text="天气"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:onClick="onClick"
+                android:textColor="#fff"
+                />
+            <View
+                android:id="@+id/main_title_indicator"
+                android:layout_width="40dp"
+                android:layout_height="3dp"
+                android:layout_marginLeft="20dp"
+                android:background="#fff"
+                android:layout_gravity="bottom"
+                />
+
+        </FrameLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/main_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</LinearLayout>

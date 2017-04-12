@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
 
 android {
     compileSdkVersion 23
@@ -19,6 +20,15 @@ android {
     }
 }
 
+
+greendao{
+    //数据库的版本号
+    schemaVersion 2;
+    //生成的Daos,DaoMaster的路径
+    daoPackage 'com.liner.graduationproject.db.bean'
+    //生成的资源路径，默认在build里
+    targetGenDir "src/main/java"
+}
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -33,4 +43,5 @@ dependencies {
 
 
     compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'org.greenrobot:greendao:3.2.2' // add library
 }

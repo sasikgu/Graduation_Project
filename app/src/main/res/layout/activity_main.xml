@@ -1,90 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.liner.graduationproject.MainActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/main_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#0ff"
-        android:layout_gravity="center"
-        >
+
+    <include
+        layout="@layout/activity_main_content"/>
+    <include
+        android:id="@+id/main_cover"
+        android:visibility="gone"
+        layout="@layout/activity_main_cover"/>
 
 
-    </android.support.v7.widget.Toolbar>
-
-
-
-    <android.support.v4.widget.DrawerLayout
-        android:id="@+id/main_drawerlayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/main_toolbar"
-        >
-
-        <FrameLayout
-            android:id="@+id/main_content"
-            android:layout_below="@id/main_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#fff"
-            />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#00f"
-            android:layout_gravity="left"
-            android:orientation="vertical"
-            >
-
-
-
-
-        </LinearLayout>
-
-
-    </android.support.v4.widget.DrawerLayout>
-
-    <FrameLayout
-        android:id="@+id/main_title_page"
-        android:layout_width="160dp"
-        android:layout_height="50dp"
-        android:layout_centerHorizontal="true"
-        >
-        <TextView
-            android:id="@+id/main_title_map"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:text="地图"
-            android:gravity="center"
-            android:textSize="20sp"
-            android:onClick="onClick"
-            />
-        <TextView
-            android:id="@+id/main_title_weather"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="80dp"
-            android:text="天气"
-            android:gravity="center"
-            android:textSize="20sp"
-            android:onClick="onClick"
-            />
-        <View
-            android:id="@+id/main_title_indicator"
-            android:layout_width="40dp"
-            android:layout_height="3dp"
-            android:layout_marginLeft="20dp"
-            android:background="#000"
-            android:layout_gravity="bottom"
-            />
-
-    </FrameLayout>
-
-
-</RelativeLayout>
+</FrameLayout>

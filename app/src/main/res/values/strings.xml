@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_name">Graduation_Project</string>
     <string name="open_drawer">OpenDrawer</string>
     <string name="close_drawer">CloseDrawer</string>
 

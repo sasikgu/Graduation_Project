@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0ff"
+    >
+
+
+    <ImageView
+        android:id="@+id/main_cover_image_btn"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:src="@mipmap/arrow"
+        android:onClick="onClick"
+        />
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:id="@+id/user_icon"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@mipmap/me_avatar_boy_grey"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:scaleType="fitXY"
+        />
+    <LinearLayout
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/user_icon"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="match_parent"
+            android:src="@mipmap/user"
+            />
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+
+            android:textSize="20sp"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/two"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/one"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="match_parent"
+            android:src="@mipmap/age"
+            />
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+
+            android:textSize="20sp"
+            android:gravity="center"
+
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/three"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/two"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="match_parent"
+            android:src="@mipmap/sex"
+            />
+        <TextView
+            android:id="@+id/sex"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+
+            android:textSize="20sp"
+            android:gravity="center"
+
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/four"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/three"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="match_parent"
+            android:src="@mipmap/birthday_cake"
+            />
+        <TextView
+            android:id="@+id/birthday"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+
+            android:textSize="20sp"
+            android:gravity="center"
+
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/five"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/four"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="match_parent"
+            android:src="@mipmap/constellation"
+            />
+        <TextView
+            android:id="@+id/constellation"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+
+            android:textSize="20sp"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/six"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/five"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="match_parent"
+            android:src="@mipmap/location"
+            />
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+
+            android:textSize="20sp"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/seven"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/six"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="30dp"
+            android:src="@mipmap/mng_introduction_icon"
+            />
+        <TextView
+            android:id="@+id/introduction"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+
+            android:textSize="20sp"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

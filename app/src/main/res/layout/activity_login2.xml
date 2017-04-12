@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.liner.graduationproject.db.activitys.LoginActivity">
+
+
+    <ImageView
+        android:id="@+id/login_people_icon"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@mipmap/me_avatar_boy_grey"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:scaleType="fitXY"
+        />
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册登录"
+        android:layout_below="@id/login_people_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="17sp"
+        android:textColor="#000"
+        />
+
+    <LinearLayout
+        android:id="@+id/msg_input_username"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/login_title"
+        android:gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/usertwo"
+            />
+        <EditText
+            android:id="@+id/login_username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="请输入用户名"
+            android:textSize="13sp"
+            />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/msg_input_password"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/msg_input_username"
+        android:gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/password"
+            />
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="请输入密码"
+            android:textSize="13sp"
+            />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/input_login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/msg_input_password"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        >
+        <Button
+            android:id="@+id/login_register_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:text="注册"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:background="#EDEDED"
+            android:onClick="onClick"
+            />
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"/>
+        <Button
+            android:id="@+id/login_login_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:text="登录"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:background="#EDEDED"
+            android:onClick="onClick"
+            />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/input_text_sign"
+        android:layout_below="@id/input_login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        >
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="1dp"
+            android:background="#CFCFCF"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用社交账号登录"
+            android:layout_gravity="center"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="1dp"
+            android:background="#CFCFCF"
+            android:layout_gravity="center"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/input_text_sign"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        >
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:src="@mipmap/icon_share_sina"
+            />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:src="@mipmap/icon_share_wechat"
+            />
+        <ImageView
+            android:id="@+id/login_qq"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:src="@mipmap/icon_share_qq"
+            />
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
