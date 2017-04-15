@@ -31,7 +31,7 @@
     <LinearLayout
         android:id="@+id/msg_input_username"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="40dp"
         android:orientation="horizontal"
         android:layout_below="@id/login_title"
         android:gravity="center"
@@ -61,7 +61,7 @@
     <LinearLayout
         android:id="@+id/msg_input_password"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="40dp"
         android:orientation="horizontal"
         android:layout_below="@id/msg_input_username"
         android:gravity="center"
@@ -106,8 +106,8 @@
             android:layout_height="45dp"
             android:text="注册"
             android:textSize="18sp"
-            android:textColor="#fff"
-            android:background="#EDEDED"
+            android:textColor="#DC143C"
+            android:background="#0000"
             android:onClick="onClick"
             />
         <View
@@ -120,8 +120,8 @@
             android:layout_height="45dp"
             android:text="登录"
             android:textSize="18sp"
-            android:textColor="#fff"
-            android:background="#EDEDED"
+            android:textColor="#DC143C"
+            android:background="#0000"
             android:onClick="onClick"
             />
 

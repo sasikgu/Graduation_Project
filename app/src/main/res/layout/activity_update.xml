@@ -1,44 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_register"
+    android:id="@+id/activity_update"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
-    tools:context="com.liner.graduationproject.db.activitys.RegisterActivity">
+    tools:context="com.liner.graduationproject.db.activitys.UpdateActivity">
 
 
-    <ImageView
-        android:id="@+id/register_people_icon"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:src="@mipmap/me_avatar_boy_grey"
-        android:layout_centerHorizontal="true"
-        android:scaleType="fitXY"
-        />
     <TextView
-        android:id="@+id/register_title"
-        android:layout_below="@id/register_people_icon"
+        android:id="@+id/update_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="用户注册"
-        android:layout_marginTop="10dp"
-        android:textSize="17sp"
-        android:textColor="#000"
+        android:text="个人信息修改"
+        android:textSize="25sp"
+        android:textStyle="bold"
         android:gravity="center"
+        android:layout_marginTop="20dp"
         />
-
     <!--用户名框-->
     <LinearLayout
-        android:id="@+id/register_input_username"
+        android:id="@+id/update_input_username"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal"
-        android:layout_below="@id/register_title"
         android:gravity="center"
+        android:layout_below="@id/update_title"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         >
 
         <ImageView
@@ -47,7 +36,7 @@
             android:src="@mipmap/usertwo"
             />
         <EditText
-            android:id="@+id/register_username"
+            android:id="@+id/update_username"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="请输入用户名"
@@ -61,11 +50,11 @@
     <!--密码框-->
 
     <LinearLayout
-        android:id="@+id/register_input_password"
+        android:id="@+id/update_input_password"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal"
-        android:layout_below="@id/register_input_username"
+        android:layout_below="@id/update_input_username"
         android:gravity="center"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
@@ -78,7 +67,7 @@
             android:src="@mipmap/password"
             />
         <EditText
-            android:id="@+id/register_password"
+            android:id="@+id/update_password"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="请输入密码"
@@ -90,11 +79,11 @@
 
     <!--年龄框-->
     <LinearLayout
-        android:id="@+id/register_input_age"
+        android:id="@+id/update_input_age"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal"
-        android:layout_below="@id/register_input_password"
+        android:layout_below="@id/update_input_password"
         android:gravity="center"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
@@ -108,7 +97,7 @@
             />
 
         <EditText
-            android:id="@+id/register_age"
+            android:id="@+id/update_age"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="请输入年龄"
@@ -121,11 +110,11 @@
 
     <!--性别框-->
     <LinearLayout
-        android:id="@+id/register_input_sex"
+        android:id="@+id/update_input_sex"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal"
-        android:layout_below="@id/register_input_age"
+        android:layout_below="@id/update_input_age"
         android:gravity="center"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
@@ -138,7 +127,7 @@
             android:src="@mipmap/register_sex"
             />
         <EditText
-            android:id="@+id/register_sex"
+            android:id="@+id/update_sex"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="请输入性别"
@@ -152,11 +141,11 @@
 
     <!--生日框-->
     <LinearLayout
-        android:id="@+id/register_input_birthday"
+        android:id="@+id/update_input_birthday"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal"
-        android:layout_below="@id/register_input_sex"
+        android:layout_below="@id/update_input_sex"
         android:gravity="center"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
@@ -169,7 +158,7 @@
             android:src="@mipmap/register_birthday"
             />
         <EditText
-            android:id="@+id/register_birthday"
+            android:id="@+id/update_birthday"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="请输入生日"
@@ -183,11 +172,11 @@
 
     <!--星座框-->
     <LinearLayout
-        android:id="@+id/register_input_star"
+        android:id="@+id/update_input_star"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal"
-        android:layout_below="@id/register_input_birthday"
+        android:layout_below="@id/update_input_birthday"
         android:gravity="center"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
@@ -200,7 +189,7 @@
             android:src="@mipmap/register_star"
             />
         <EditText
-            android:id="@+id/register_star"
+            android:id="@+id/update_star"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="请输入星座"
@@ -213,11 +202,11 @@
 
     <!--居住地框-->
     <LinearLayout
-        android:id="@+id/register_input_place"
+        android:id="@+id/update_input_place"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal"
-        android:layout_below="@id/register_input_star"
+        android:layout_below="@id/update_input_star"
         android:gravity="center"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
@@ -230,7 +219,7 @@
             android:src="@mipmap/register_place"
             />
         <EditText
-            android:id="@+id/register_place"
+            android:id="@+id/update_place"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="请输入居住地"
@@ -242,11 +231,11 @@
 
     <!--签名框-->
     <LinearLayout
-        android:id="@+id/register_input_intro"
+        android:id="@+id/update_input_intro"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal"
-        android:layout_below="@id/register_input_place"
+        android:layout_below="@id/update_input_place"
         android:gravity="center"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
@@ -259,7 +248,7 @@
             android:src="@mipmap/register_intro"
             />
         <EditText
-            android:id="@+id/register_intro"
+            android:id="@+id/update_intro"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="请输入个人简介"
@@ -270,7 +259,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/register_input_btn"
+        android:id="@+id/update_input_btn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
@@ -278,33 +267,30 @@
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginTop="20dp"
-        android:layout_below="@+id/register_input_intro"
-        android:layout_alignLeft="@+id/register_input_intro"
-        android:layout_alignStart="@+id/register_input_intro">
+        android:layout_below="@+id/update_input_intro"
+        >
 
         <Button
-            android:id="@+id/register_register"
+            android:id="@+id/update_ok"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="注册"
+            android:text="确定"
             android:textSize="20sp"
-            android:textColor="#DC143C"
-            android:background="#0000"
+            android:onClick="onClick"
             />
         <!--<View-->
-            <!--android:layout_width="3dp"-->
-            <!--android:layout_height="match_parent"/>-->
+        <!--android:layout_width="3dp"-->
+        <!--android:layout_height="match_parent"/>-->
 
         <Button
-            android:id="@+id/register_cancle"
+            android:id="@+id/update_cancle"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:text="取消"
             android:textSize="20sp"
-            android:textColor="#DC143C"
-            android:background="#0000"
+            android:onClick="onClick"
             />
 
 

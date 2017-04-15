@@ -2,9 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#0ff"
-    >
+    android:background="@mipmap/cover_bg2"
+    android:orientation="vertical">
 
 
     <ImageView
@@ -13,73 +12,68 @@
         android:layout_height="50dp"
         android:layout_alignParentRight="true"
         android:layout_margin="5dp"
-        android:src="@mipmap/arrow"
         android:onClick="onClick"
-        />
+        android:src="@mipmap/arrow" />
 
     <ImageView
-        android:layout_marginTop="5dp"
         android:id="@+id/user_icon"
         android:layout_width="90dp"
         android:layout_height="90dp"
-        android:src="@mipmap/me_avatar_boy_grey"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:onClick="onClick"
         android:scaleType="fitXY"
-        />
+        android:src="@mipmap/me_avatar_boy_grey" />
+
     <LinearLayout
         android:id="@+id/one"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:orientation="horizontal"
         android:layout_below="@id/user_icon"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        >
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_weight="1.5"
             android:layout_height="match_parent"
-            android:src="@mipmap/user"
-            />
+            android:layout_weight="1"
+            android:src="@mipmap/user" />
+
         <TextView
             android:id="@+id/username"
             android:layout_width="0dp"
-            android:layout_weight="2"
             android:layout_height="match_parent"
-
-            android:textSize="20sp"
+            android:layout_weight="2"
             android:gravity="center"
-            />
+            android:text="用户名"
+            android:textSize="20sp" />
     </LinearLayout>
-
 
 
     <LinearLayout
         android:id="@+id/two"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:orientation="horizontal"
         android:layout_below="@id/one"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        >
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_weight="1.5"
             android:layout_height="match_parent"
-            android:src="@mipmap/age"
-            />
+            android:layout_weight="1"
+            android:src="@mipmap/age" />
+
         <TextView
             android:id="@+id/age"
             android:layout_width="0dp"
-            android:layout_weight="2"
             android:layout_height="match_parent"
-
-            android:textSize="20sp"
+            android:layout_weight="2"
             android:gravity="center"
+            android:text="年龄"
+            android:textSize="20sp"
 
             />
     </LinearLayout>
@@ -89,26 +83,25 @@
         android:id="@+id/three"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:orientation="horizontal"
         android:layout_below="@id/two"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        >
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_weight="1.5"
             android:layout_height="match_parent"
-            android:src="@mipmap/sex"
-            />
+            android:layout_weight="1"
+            android:src="@mipmap/sex" />
+
         <TextView
             android:id="@+id/sex"
             android:layout_width="0dp"
-            android:layout_weight="2"
             android:layout_height="match_parent"
-
-            android:textSize="20sp"
+            android:layout_weight="2"
             android:gravity="center"
+            android:text="性别"
+            android:textSize="20sp"
 
             />
     </LinearLayout>
@@ -118,26 +111,25 @@
         android:id="@+id/four"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:orientation="horizontal"
         android:layout_below="@id/three"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        >
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_weight="1.5"
             android:layout_height="match_parent"
-            android:src="@mipmap/birthday_cake"
-            />
+            android:layout_weight="1"
+            android:src="@mipmap/birthday_cake" />
+
         <TextView
             android:id="@+id/birthday"
             android:layout_width="0dp"
-            android:layout_weight="2"
             android:layout_height="match_parent"
-
-            android:textSize="20sp"
+            android:layout_weight="2"
             android:gravity="center"
+            android:text="生日"
+            android:textSize="20sp"
 
             />
     </LinearLayout>
@@ -147,27 +139,25 @@
         android:id="@+id/five"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:orientation="horizontal"
         android:layout_below="@id/four"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        >
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_weight="1.5"
             android:layout_height="match_parent"
-            android:src="@mipmap/constellation"
-            />
+            android:layout_weight="1"
+            android:src="@mipmap/constellation" />
+
         <TextView
             android:id="@+id/constellation"
             android:layout_width="0dp"
-            android:layout_weight="2"
             android:layout_height="match_parent"
-
-            android:textSize="20sp"
+            android:layout_weight="2"
             android:gravity="center"
-            />
+            android:text="星座"
+            android:textSize="20sp" />
     </LinearLayout>
 
 
@@ -175,27 +165,25 @@
         android:id="@+id/six"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:orientation="horizontal"
         android:layout_below="@id/five"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        >
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_weight="1.5"
             android:layout_height="match_parent"
-            android:src="@mipmap/location"
-            />
+            android:layout_weight="1"
+            android:src="@mipmap/place" />
+
         <TextView
             android:id="@+id/location"
             android:layout_width="0dp"
-            android:layout_weight="2"
             android:layout_height="match_parent"
-
-            android:textSize="20sp"
+            android:layout_weight="2"
             android:gravity="center"
-            />
+            android:text="居住地"
+            android:textSize="20sp" />
     </LinearLayout>
 
 
@@ -203,28 +191,56 @@
         android:id="@+id/seven"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:orientation="horizontal"
         android:layout_below="@id/six"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        >
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_weight="1.5"
             android:layout_height="30dp"
-            android:src="@mipmap/mng_introduction_icon"
-            />
+            android:layout_weight="1"
+            android:src="@mipmap/mng_introduction_icon" />
+
         <TextView
             android:id="@+id/introduction"
             android:layout_width="0dp"
-            android:layout_weight="2"
             android:layout_height="match_parent"
-
-            android:textSize="20sp"
+            android:layout_weight="2"
             android:gravity="center"
-            />
+            android:text="签名"
+            android:textSize="20sp" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/update_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seven"
+        android:layout_marginTop="30dp"
+        android:text="修改资料"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:textColor="#DC143C"
+        android:background="#0000"
+        />
+    <Button
+        android:id="@+id/quit_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/update_msg"
+        android:layout_marginTop="10dp"
+        android:text="退出登录"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:textColor="#DC143C"
+        android:background="#0000"
+        android:visibility="gone"
+        />
 
 
 </RelativeLayout>

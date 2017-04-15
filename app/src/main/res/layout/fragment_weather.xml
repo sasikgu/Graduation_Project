@@ -2,40 +2,40 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@mipmap/weather_xia"
-    >
+    android:orientation="vertical">
 
-   <LinearLayout
-       android:id="@+id/weather_ll"
-       android:layout_width="match_parent"
-       android:layout_height="55dp"
-       android:orientation="horizontal">
-      <EditText
-          android:id="@+id/weather_city"
-          android:layout_width="0dp"
-          android:layout_weight="2.7"
-          android:layout_height="45dp"
-          android:background="@drawable/weather_et_shape"
-          android:gravity="center"
-          android:hint="请输入城市名"/>
-      <Button
-          android:id="@+id/weather_seacher_bt"
-          android:layout_width="0dp"
-          android:layout_weight="1"
-          android:layout_height="44dp"
-          android:background="@drawable/weather_bt_selector"
-         android:textColor="@color/colorWhite"
-         android:layout_marginLeft="5dp"
-          android:layout_marginRight="5dp"
-          android:text="查询"/>
-   </LinearLayout>
+    <LinearLayout
+        android:id="@+id/weather_ll"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal">
 
-   <ListView
-       android:id="@+id/weather_lv"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
-   </ListView>
+        <EditText
+            android:id="@+id/weather_city"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="2.7"
+            android:background="@drawable/weather_et_shape"
+            android:gravity="center"
+            android:hint="请输入城市名" />
+
+        <Button
+            android:id="@+id/weather_seacher_bt"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/weather_bt_selector"
+            android:text="查询"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/weather_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
 
 
 </LinearLayout>

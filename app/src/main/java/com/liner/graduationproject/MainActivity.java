@@ -10,15 +10,19 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.test.mock.MockApplication;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.liner.graduationproject.db.activitys.LoginActivity;
+import com.liner.graduationproject.db.activitys.UpdateActivity;
 import com.liner.graduationproject.db.bean.DaoSession;
 import com.liner.graduationproject.db.bean.User;
 import com.liner.graduationproject.db.bean.UserDao;
@@ -42,8 +46,9 @@ public class MainActivity extends AppCompatActivity  {
     private FrameLayout mTitlePage;
     private View mCover;
 
-    //从登录界面传过来的值
+    //从登录界面或者修改界面传过来的值
     private String loginUserName;
+
     private TextView menuUserName;
     private TextView menuAge;
     private TextView menuSex;
@@ -51,6 +56,7 @@ public class MainActivity extends AppCompatActivity  {
     private TextView menuStar;
     private TextView menuPlace;
     private TextView menuIntroduction;
+    private Button mQuit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,10 +78,7 @@ public class MainActivity extends AppCompatActivity  {
         //默认一进app就加载地图界面
         switchPage(MapFragment.class);
 
-        loginUserName = getIntent().getStringExtra("loginUserName");
-//        if (!loginUserName.equals("")) {
-//            showMsg();
-//        }
+
         menuUserName = (TextView) findViewById(R.id.username);
         menuAge = (TextView) findViewById(R.id.age);
         menuSex = (TextView) findViewById(R.id.sex);
@@ -83,6 +86,8 @@ public class MainActivity extends AppCompatActivity  {
         menuStar = (TextView) findViewById(R.id.constellation);
         menuPlace = (TextView) findViewById(R.id.location);
         menuIntroduction = (TextView) findViewById(R.id.introduction);
+        mQuit = (Button) findViewById(R.id.quit_msg);
+
 
     }
 
@@ -111,6 +116,27 @@ public class MainActivity extends AppCompatActivity  {
             case R.id.user_icon:
                 Intent intent = new Intent(this, LoginActivity.class);
                 startActivityForResult(intent,110);
+                break;
+            //修改个人信息
+            case R.id.update_msg:
+                String updaterUserName = menuUserName.getText().toString().trim();
+                if (updaterUserName.equals(loginUserName)) {
+                    Intent intent1 = new Intent(this, UpdateActivity.class);
+                    intent1.putExtra("updateUserName",loginUserName);
+                    startActivityForResult(intent1,111);
+                }else{
+                    Toast.makeText(this, "还未登录，无法修改个人信息", Toast.LENGTH_SHORT).show();
+                }
+                break;
+            //退出登录
+            case R.id.quit_msg:
+                menuUserName.setText("用户名");
+                menuAge.setText("年龄");
+                menuSex.setText("性别");
+                menuBirthday.setText("生日");
+                menuStar.setText("星座");
+                menuPlace.setText("居住地");
+                menuIntroduction.setText("签名");
                 break;
 
         }
@@ -161,15 +187,15 @@ public class MainActivity extends AppCompatActivity  {
 
     }
 
-    private void showMsg() {
+    private void showMsg(String userName) {
         DaoSession daoSession = ((BaseApp) getApplication()).getDaoSession();
         UserDao userDao = daoSession.getUserDao();
         Query<User> query = userDao.queryBuilder()
-                .where(UserDao.Properties.UserName.eq(loginUserName))
+                .where(UserDao.Properties.UserName.eq(userName))
                 .build();
         List<User> list = query.list();
         for (User userList : list) {
-            if (userList.getUserName().equals(loginUserName)){
+            if (userList.getUserName().equals(userName)){
                 menuUserName.setText(userList.getUserName());
                 menuAge.setText(userList.getAge());
                 menuSex.setText(userList.getSex());
@@ -189,10 +215,43 @@ public class MainActivity extends AppCompatActivity  {
         switch (requestCode) {
             case 110:
                 if (resultCode == RESULT_OK) {
-                    String loginUserName = data.getStringExtra("loginUserName");
+                    loginUserName = data.getStringExtra("loginUserName");
                     Log.e(TAG, "onActivityResult: "+loginUserName );
+                    showMsg(loginUserName);
+                    //数据回传之后将退出登录按钮显示出来
+                    mQuit.setVisibility(View.VISIBLE);
+
+                }
+                break;
+            case 111:
+                if (resultCode == RESULT_OK){
+                    loginUserName = data.getStringExtra("updateUserName");
+                    showMsg(loginUserName);
                 }
                 break;
         }
     }
+
+
+    //删除数据 属于管理员的操作，用户无法操作
+    private void delete(String userName){
+        DaoSession daoSession = ((BaseApp) getApplication()).getDaoSession();
+        UserDao userDao = daoSession.getUserDao();
+        Query<User> query = userDao.queryBuilder()
+                .where(UserDao.Properties.UserName.eq(userName))
+                .build();
+        User user = query.unique();
+        if (user != null){
+            userDao.delete(user);
+            Toast.makeText(this, "数据删除成功", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this, "该条数据不存在", Toast.LENGTH_SHORT).show();
+        }
+
+
+
+    }
+
+
+
 }
