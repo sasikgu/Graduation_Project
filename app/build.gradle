@@ -12,10 +12,22 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-    buildTypes {
-        release {
+    signingConfigs{
+        release{
+            storeFile file("release.jks")
+            storePassword "123456"
+            keyAlias "release_alias"
+            keyPassword "123456"
+        }
+    }
+
+    buildTypes{
+        release{
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug{
+            signingConfig signingConfigs.release
         }
     }
 }
@@ -40,8 +52,9 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.6.0'
     compile 'com.google.code.gson:gson:2.8.0'
     compile project(':teachlibrary')
-
-
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'org.greenrobot:greendao:3.2.2' // add library
+    compile files('libs/AMap3DMap_5.0.0_AMapNavi_5.0.1_20170410.jar')
+    compile files('libs/AMap_Location_V3.3.0_20170118.jar')
+    compile files('libs/AMap_Search_V5.0.0_20170309.jar')
 }

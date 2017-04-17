@@ -15,6 +15,7 @@ public class SplashActivity extends AppCompatActivity {
     private SharedPreferences sp;
     private SharedPreferences.Editor editor;
     private boolean firstLoad;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,24 +41,24 @@ public class SplashActivity extends AppCompatActivity {
         } else {
             delayToNext(timer, isToThree);
         }
-
     }
 
     private void delayToNext(Timer timer, final Intent intent) {
 
-            TimerTask task = new TimerTask() {
+        TimerTask task = new TimerTask() {
 
-                @Override
-                public void run() {
-                    startActivity(intent);
-                }
-            };
+            @Override
+            public void run() {
+                startActivity(intent);
 
-            timer.schedule(task, 1000 * 3);
+                finish();
 
+            }
+        };
+
+        timer.schedule(task, 1000 * 3);
 
     }
-
 
 
 }

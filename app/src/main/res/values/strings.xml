@@ -2,5 +2,6 @@
     <string name="app_name">Graduation_Project</string>
     <string name="open_drawer">OpenDrawer</string>
     <string name="close_drawer">CloseDrawer</string>
+    <string name="explain">提示说明: \n1.起始点与终点可输入经纬度确定，也可输入关键字进行搜索并确定位置，都不为空时优先使用经纬度 \n2.起点为空时默认使用当前位置作为起点，建议手动设置起点，定位有失败的可能 \n3.终点不能为空</string>
 
 </resources>
